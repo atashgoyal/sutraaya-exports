@@ -1,0 +1,220 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Base Resets ─────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  background-color: #FAF7F0;
+  color: #2C1810;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* ─── Scroll Animations ───────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+.reveal-delay-5 { transition-delay: 0.5s; }
+.reveal-delay-6 { transition-delay: 0.6s; }
+
+/* ─── Typography ──────────────────────────────── */
+.font-cormorant {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-inter {
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* ─── Decorative Divider ──────────────────────── */
+.gold-divider {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #B8962E, transparent);
+}
+
+.gold-divider-wide {
+  width: 120px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #B8962E 30%, #B8962E 70%, transparent);
+}
+
+/* ─── Pattern Overlay ─────────────────────────── */
+.pattern-overlay {
+  background-image:
+    radial-gradient(circle at 25% 25%, rgba(184,150,46,0.06) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(196,113,74,0.05) 0%, transparent 50%),
+    url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23B8962E' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* ─── Card Hover ──────────────────────────────── */
+.product-card {
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 48px rgba(26, 35, 126, 0.14);
+}
+
+.product-card .card-image {
+  overflow: hidden;
+}
+
+.product-card .card-image img {
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.product-card:hover .card-image img {
+  transform: scale(1.08);
+}
+
+.product-card .card-overlay {
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.product-card:hover .card-overlay {
+  opacity: 1;
+}
+
+/* ─── Hero Pattern ────────────────────────────── */
+.hero-bg {
+  background: linear-gradient(160deg, #1A237E 0%, #283593 45%, #1E3A7E 70%, #1A1042 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg stroke='%23B8962E' stroke-opacity='0.1' stroke-width='1'%3E%3Cpath d='M40 0 L80 40 L40 80 L0 40 Z'/%3E%3Ccircle cx='40' cy='40' r='15'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
+/* ─── Buttons ─────────────────────────────────── */
+.btn-primary {
+  @apply inline-flex items-center gap-2 px-8 py-3.5 bg-terracotta text-ivory font-inter text-sm font-medium tracking-widest uppercase rounded-none;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  letter-spacing: 0.15em;
+}
+
+.btn-primary:hover {
+  @apply bg-terracotta-dark;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(196, 113, 74, 0.35);
+}
+
+.btn-outline {
+  @apply inline-flex items-center gap-2 px-8 py-3.5 border border-gold text-gold font-inter text-sm font-medium tracking-widest uppercase rounded-none bg-transparent;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  letter-spacing: 0.15em;
+}
+
+.btn-outline:hover {
+  @apply bg-gold text-ivory;
+  transform: translateY(-1px);
+}
+
+/* ─── Section Headings ────────────────────────── */
+.section-eyebrow {
+  @apply font-inter text-xs font-medium tracking-widest uppercase text-gold;
+  letter-spacing: 0.25em;
+}
+
+.section-title {
+  @apply font-cormorant text-4xl md:text-5xl font-light text-indigo-deep leading-tight;
+}
+
+/* ─── Input Styles ────────────────────────────── */
+.form-input {
+  @apply w-full px-4 py-3 bg-white border border-cream text-bark font-inter text-sm;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  outline: none;
+}
+
+.form-input:focus {
+  border-color: #B8962E;
+  box-shadow: 0 0 0 3px rgba(184, 150, 46, 0.1);
+}
+
+.form-input::placeholder {
+  color: #9E8E7E;
+}
+
+/* ─── Scrollbar ───────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #FAF7F0; }
+::-webkit-scrollbar-thumb { background: #B8962E; border-radius: 3px; }
+
+/* ─── Filter Tabs ─────────────────────────────── */
+.filter-tab {
+  @apply px-5 py-2 font-inter text-xs font-medium tracking-wider uppercase border transition-all duration-200 cursor-pointer;
+  letter-spacing: 0.1em;
+}
+
+.filter-tab.active {
+  @apply bg-indigo-deep text-ivory border-indigo-deep;
+}
+
+.filter-tab:not(.active) {
+  @apply bg-transparent text-bark border-cream hover:border-gold hover:text-gold;
+}
+
+/* ─── Image Loading Skeleton ──────────────────── */
+.img-skeleton {
+  background: linear-gradient(90deg, #F5EFE0 25%, #EDE4D0 50%, #F5EFE0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* ─── Nav Link ────────────────────────────────── */
+.nav-link {
+  @apply font-inter text-xs font-medium tracking-wider uppercase relative;
+  letter-spacing: 0.12em;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #B8962E;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
