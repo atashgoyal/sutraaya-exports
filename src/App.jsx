@@ -161,7 +161,7 @@ function BackToTop() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label={label}
-          className="w-9 h-9 flex items-center justify-center bg-white
+          className="w-11 h-11 flex items-center justify-center bg-white
                      border border-cream shadow-sm hover:scale-110
                      transition-transform duration-200"
         >
