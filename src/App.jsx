@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback } from 'react'
+import { FaWhatsapp } from 'react-icons/fa'
 import Header  from './components/Header'
 import Hero    from './components/Hero'
 import Products from './components/Products'
@@ -74,8 +75,9 @@ function InquiryModal({ product, onClose }) {
                 href={`https://wa.me/919811818950?text=${waMessage}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-primary w-full justify-center text-xs"
+                className="btn-primary w-full justify-center text-xs flex items-center gap-2"
               >
+                <FaWhatsapp className="text-sm" />
                 Enquire on WhatsApp
               </a>
               <button
@@ -120,10 +122,7 @@ const SOCIALS = [
     label: 'WhatsApp',
     href: 'https://wa.me/919811818950',
     icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="12" cy="12" r="12" fill="#25D366"/>
-        <path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4C8 9.3 7.4 10 7.4 11.4s1.1 2.8 1.2 3c.1.2 2 3.1 5 4.3.7.3 1.2.4 1.7.5.7.2 1.3.1 1.8-.1.5-.3 1.7-1.1 1.9-2.2.2-.9.2-1.6.1-1.7-.1-.1-.3-.2-.6-.3z" fill="white"/>
-      </svg>
+      <FaWhatsapp size={22} color="#25D366" />
     ),
   },
   {
