@@ -115,22 +115,6 @@ export default function Footer() {
               across the globe.
             </p>
 
-            {/* Social icons */}
-            <div className="flex items-center gap-3 mt-8">
-              {SOCIAL_LINKS.map(({ label, href, icon }) => (
-                <a
-                  key={label}
-                  href={href}
-                  target={href.startsWith('http') ? '_blank' : undefined}
-                  rel="noopener noreferrer"
-                  aria-label={label}
-                  className="w-9 h-9 flex items-center justify-center border border-ivory/20 text-ivory/50
-                             hover:border-gold hover:text-gold transition-all duration-200"
-                >
-                  {icon}
-                </a>
-              ))}
-            </div>
 
             {/* Cert badges */}
             <div className="flex flex-wrap items-center gap-3 mt-8">

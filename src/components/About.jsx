@@ -150,17 +150,24 @@ export default function About() {
         </div>
 
         {/* ── Four Pillars ─────────────────────────── */}
-        <div className="mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {PILLARS.map(({ icon, title, text }, i) => (
-            <div
-              key={title}
-              className={`reveal reveal-delay-${i + 1} flex flex-col items-center text-center p-8 bg-white border border-cream hover:border-gold transition-colors duration-300`}
-            >
-              <div className="mb-4 w-12 h-12 flex items-center justify-center">{icon}</div>
-              <h3 className="font-cormorant text-xl font-medium text-indigo-deep mb-3">{title}</h3>
-              <p className="font-inter text-xs text-bark/60 leading-relaxed">{text}</p>
-            </div>
-          ))}
+        <div className="mt-20">
+          <div className="text-center mb-10">
+            <p className="reveal section-eyebrow mb-3">Why Partner With Us</p>
+            <div className="reveal reveal-delay-2 gold-divider mx-auto mb-8" />
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {PILLARS.map(({ icon, title, text }, i) => (
+              <div
+                key={title}
+                className={`reveal reveal-delay-${i + 1} flex flex-col items-center text-center p-8 bg-white border border-cream hover:border-gold transition-colors duration-300`}
+              >
+                <div className="mb-4 w-12 h-12 flex items-center justify-center">{icon}</div>
+                <h3 className="font-cormorant text-xl font-medium text-indigo-deep mb-3">{title}</h3>
+                <p className="font-inter text-xs text-bark/60 leading-relaxed">{text}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

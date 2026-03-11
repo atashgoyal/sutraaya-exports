@@ -100,7 +100,7 @@ const SOCIALS = [
     label: 'Instagram',
     href: 'https://www.instagram.com/sutraayaofficial?igsh=bmJvM3B1dTltMmMx&utm_source=qr',
     icon: (
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <radialGradient id="ig-grad" cx="30%" cy="107%" r="150%">
             <stop offset="0%" stopColor="#fdf497"/>
@@ -120,7 +120,7 @@ const SOCIALS = [
     label: 'WhatsApp',
     href: 'https://wa.me/919811818950',
     icon: (
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="12" cy="12" r="12" fill="#25D366"/>
         <path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4C8 9.3 7.4 10 7.4 11.4s1.1 2.8 1.2 3c.1.2 2 3.1 5 4.3.7.3 1.2.4 1.7.5.7.2 1.3.1 1.8-.1.5-.3 1.7-1.1 1.9-2.2.2-.9.2-1.6.1-1.7-.1-.1-.3-.2-.6-.3z" fill="white"/>
       </svg>
@@ -130,7 +130,7 @@ const SOCIALS = [
     label: 'Facebook',
     href: 'https://www.facebook.com/profile.php?id=61587769965156',
     icon: (
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="12" cy="12" r="12" fill="#1877F2"/>
         <path d="M15.5 8H13.5C13.2 8 13 8.2 13 8.5V10H15.5L15.2 12.5H13V19H10.5V12.5H9V10H10.5V8.5C10.5 6.6 11.6 5.5 13.5 5.5H15.5V8Z" fill="white"/>
       </svg>
