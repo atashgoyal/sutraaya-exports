@@ -67,10 +67,6 @@ export default function Contact({ prefillProduct = '' }) {
                 Whether you're a boutique retailer, interior designer, hotel buyer, wholesaler, handicraft importer or a
                 thoughtful individual looking for unique pieces — we'd love to hear from you.
               </p>
-              <p>
-                We handle export logistics end-to-end: quality inspection, custom packaging,
-                insured shipping, and paperwork for US, UK, Canada & EU customs.
-              </p>
             </div>
 
             {/* Contact details */}
