@@ -150,17 +150,7 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* ── Scroll indicator ─────────────────────── */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
-        <span className="font-inter text-xs text-ivory/30 tracking-widest uppercase"
-              style={{ letterSpacing: '0.2em' }}>Scroll</span>
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-          <path d="M5 7l5 5 5-5" stroke="#B8962E" strokeOpacity="0.5" strokeWidth="1.5"
-                strokeLinecap="round" strokeLinejoin="round" />
-        </svg>
-      </div>
-
-      {/* ── Bottom fade to ivory ──────────────────── */}
+{/* ── Bottom fade to ivory ──────────────────── */}
       <div
         className="absolute bottom-0 left-0 right-0 h-32 pointer-events-none"
         style={{ background: 'linear-gradient(to bottom, transparent, #FAF7F0)' }}
