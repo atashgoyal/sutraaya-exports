@@ -126,7 +126,7 @@ export default function Hero() {
           style={{ fontWeight: 300 }}
         >
           We partner with India's finest artisans to bring authentic, ethically crafted Blue
-          Pottery and handicrafts to homes across the US, UK, and Europe.
+          Pottery, textile and handicrafts to homes across the world.
         </p>
 
         {/* CTA Buttons */}

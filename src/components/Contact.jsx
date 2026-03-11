@@ -64,7 +64,7 @@ export default function Contact({ prefillProduct = '' }) {
 
             <div className="reveal reveal-delay-2 space-y-4 font-inter text-sm text-bark/70 leading-relaxed mb-10">
               <p>
-                Whether you're a boutique retailer, interior designer, hotel buyer, or a
+                Whether you're a boutique retailer, interior designer, hotel buyer, wholesaler, handicraft importer or a
                 thoughtful individual looking for unique pieces — we'd love to hear from you.
               </p>
               <p>

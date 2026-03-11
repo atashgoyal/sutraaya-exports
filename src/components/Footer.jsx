@@ -87,10 +87,10 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
             <h3 className="font-cormorant text-3xl font-light text-ivory mb-1">
-              Ready to bring India home?
+              Ready to bring handmade beauty into your home?
             </h3>
             <p className="font-inter text-xs text-ivory/50 tracking-wide">
-              Exclusive artisan pieces, ready for worldwide export.
+              Exclusive artisan pieces, crafted in India for worldwide export.
             </p>
           </div>
           <button
@@ -184,17 +184,6 @@ export default function Footer() {
           <p className="font-inter text-xs text-ivory/30" style={{ letterSpacing: '0.06em' }}>
             Handcrafted in India. Loved by the World.
           </p>
-          <div className="flex items-center gap-4">
-            {['Privacy Policy', 'Terms of Service'].map((item) => (
-              <a
-                key={item}
-                href="#"
-                className="font-inter text-xs text-ivory/30 hover:text-ivory/60 transition-colors duration-200"
-              >
-                {item}
-              </a>
-            ))}
-          </div>
         </div>
       </div>
     </footer>
