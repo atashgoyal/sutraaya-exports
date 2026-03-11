@@ -10,20 +10,29 @@ const PILLARS = [
         <path d="M16 12v8M12 16h8" stroke="#B8962E" strokeWidth="1.5" strokeLinecap="round"/>
       </svg>
     ),
-    title: 'Handmade',
-    text:  'Every piece is individually shaped, painted, and fired by skilled artisans — no two are identical.',
+    title: 'Authentic Handcrafted Products',
+    text:  'Every piece is individually shaped and crafted by skilled artisans — no two are identical.',
   },
   {
     icon: (
       <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-        <circle cx="16" cy="16" r="10" stroke="#B8962E" strokeWidth="1.5" fill="none"/>
-        <path d="M16 6 C10 10 10 22 16 26 C22 22 22 10 16 6Z"
-              stroke="#B8962E" strokeWidth="1.5" fill="none"/>
-        <path d="M6 16h20" stroke="#B8962E" strokeWidth="1.5" strokeLinecap="round"/>
+        <circle cx="16" cy="10" r="5" stroke="#B8962E" strokeWidth="1.5" fill="none"/>
+        <path d="M8 28c0-4.4 3.6-8 8-8s8 3.6 8 8" stroke="#B8962E" strokeWidth="1.5" strokeLinecap="round" fill="none"/>
+        <path d="M22 14c2.2.8 4 2.8 4 5.5" stroke="#B8962E" strokeWidth="1.5" strokeLinecap="round"/>
       </svg>
     ),
-    title: 'Eco-Friendly',
-    text:  'Natural mineral pigments, local quartz, and lead-free glazes. Gentle on the planet, stunning in your space.',
+    title: 'Direct Artisan Sourcing',
+    text:  'We work directly with artisan communities across India, ensuring authenticity and fair partnerships.',
+  },
+  {
+    icon: (
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+        <path d="M8 16l5 5 11-11" stroke="#B8962E" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+        <circle cx="16" cy="16" r="11" stroke="#B8962E" strokeWidth="1.5" fill="none"/>
+      </svg>
+    ),
+    title: 'Consistent Quality Checks',
+    text:  'Every product is carefully inspected before export, ensuring reliability for retail and import partners.',
   },
   {
     icon: (
@@ -33,18 +42,8 @@ const PILLARS = [
         <path d="M13 10V8M19 10V8" stroke="#B8962E" strokeWidth="1.5" strokeLinecap="round"/>
       </svg>
     ),
-    title: 'Worldwide Shipping',
-    text:  'Professionally packed and insured worldwide delivery to the US, UK, EU and beyond.',
-  },
-  {
-    icon: (
-      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-        <path d="M16 28C16 28 4 22 4 12a6 6 0 0112-1 6 6 0 0112 1C28 22 16 28 16 28z"
-              stroke="#B8962E" strokeWidth="1.5" strokeLinejoin="round" fill="none"/>
-      </svg>
-    ),
-    title: 'Ethically Sourced',
-    text:  'We partner directly with certified artisan co-operatives, ensuring fair wages and dignified work.',
+    title: 'Custom Orders & Global Shipping',
+    text:  'Custom orders available with worldwide shipping support to the US, UK, EU and beyond.',
   },
 ]
 
@@ -59,7 +58,7 @@ export default function About() {
 
           {/* ── Left: Story text ─────────────────── */}
           <div>
-            <p className="reveal section-eyebrow mb-3">Our Heritage</p>
+            <p className="reveal section-eyebrow mb-3">About Sutraaya Exports</p>
             <h2 className="reveal section-title reveal-delay-1 mb-6">
               Where Ancient Craft
               <span className="block italic font-light text-terracotta">
@@ -70,22 +69,25 @@ export default function About() {
 
             <div className="reveal reveal-delay-2 space-y-5 font-inter text-sm text-bark/70 leading-relaxed">
               <p>
-                For over five centuries, the artisans of Jaipur have practised the rare art of
-                Blue Pottery — a craft so distinctive it carries a{' '}
-                <em className="text-bark/90">Geographical Indication</em> tag by the Government of India.
-                Rooted in Persian and Mughal traditions, it is shaped by hand, glazed with mineral
-                pigments, and fired at low temperatures to preserve its signature cobalt brilliance.
+                Sutraaya Exports brings India's rich craft heritage to global markets. From the
+                renowned Blue Pottery of Jaipur — a centuries-old craft recognised with a{' '}
+                <em className="text-bark/90">Geographical Indication</em> tag — to the intricate
+                hand block-print textiles of Rajasthan, finely carved wooden crafts, and
+                artisan-made bags, our collections celebrate timeless traditions and skilled
+                craftsmanship.
               </p>
               <p>
-                At <strong className="font-medium text-indigo-deep">Sutraaya Exports</strong>, we act
-                as the bridge between these master craftspeople and homes around the world. In
-                collaboration with artisans, we curate, quality-check, and export the finest pieces
-                with the same care they were created with.
+                We work closely with artisan communities across India to curate high-quality
+                handmade products that reflect authenticity, culture, and sustainability. Every
+                piece is carefully selected, quality-checked, and prepared for international
+                markets, ensuring reliable sourcing for retailers and import partners.
               </p>
               <p>
-                Every purchase supports an artisan family, preserves a living tradition, and
-                brings a piece of India's soul into your home.
+                By choosing <strong className="font-medium text-indigo-deep">Sutraaya Exports</strong>,
+                you support artisan livelihoods while bringing distinctive handmade creations into
+                homes around the world.
               </p>
+              <p className="italic text-bark/60">Crafted in India, delivered worldwide.</p>
             </div>
 
             <div className="reveal reveal-delay-3 mt-8 flex flex-col sm:flex-row gap-4">
