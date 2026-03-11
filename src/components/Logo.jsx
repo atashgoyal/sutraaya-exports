@@ -115,19 +115,6 @@ export default function Logo({ variant = 'dark', compact = false }) {
             </span>
             <span style={{ flex: 1, height: '1px', background: gold, opacity: 0.55 }} />
           </span>
-          <span
-            style={{
-              fontFamily: 'Inter, system-ui, sans-serif',
-              fontSize: '6.5px',
-              fontWeight: 400,
-              letterSpacing: '0.25em',
-              color: goldL,
-              lineHeight: 1,
-              opacity: 0.8,
-            }}
-          >
-            CONNECTED BY THREAD
-          </span>
         </div>
       )}
     </div>

@@ -79,17 +79,8 @@ export default function About() {
               <p>
                 At <strong className="font-medium text-indigo-deep">Sutraaya Exports</strong>, we act
                 as the bridge between these master craftspeople and homes around the world. In
-                partnership with{' '}
-                <a
-                  href="https://deals.heartfulcraft.com/shruti-srivastava/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-terracotta hover:text-terracotta-dark underline underline-offset-2 transition-colors duration-200"
-                >
-                  Heartful Crafts
-                </a>
-                , we curate, quality-check, and export the finest pieces with the same care they
-                were created with.
+                collaboration with artisans, we curate, quality-check, and export the finest pieces
+                with the same care they were created with.
               </p>
               <p>
                 Every purchase supports an artisan family, preserves a living tradition, and

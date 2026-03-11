@@ -40,20 +40,21 @@ const SOCIAL_LINKS = [
 
 const FOOTER_LINKS = {
   Collection: [
-    { label: 'Blue Pottery Plates',    href: '#collection' },
-    { label: 'Vases & Handis',         href: '#collection' },
-    { label: 'Jars & Canisters',       href: '#collection' },
-    { label: 'Egg Holders',            href: '#collection' },
-    { label: 'Décor & Bells',          href: '#collection' },
+    { label: 'Blue Pottery',           href: '#collection' },
+    { label: 'Marble Crafts',          href: '#collection' },
+    { label: 'Hand Block Fabrics',     href: '#collection' },
+    { label: 'Wooden Crafts',          href: '#collection' },
+    { label: 'Bags & Accessories',     href: '#collection' },
+    { label: 'Showpieces',             href: '#collection' },
   ],
   Company: [
     { label: 'Our Story',              href: '#about' },
-    { label: 'Heartful Crafts Partner',href: 'https://deals.heartfulcraft.com/shruti-srivastava/' },
     { label: 'Contact Us',             href: '#contact' },
     { label: 'Request a Quote',        href: '#contact' },
   ],
   Export: [
-    { label: 'US & Canada',            href: '#contact' },
+    { label: 'United States',          href: '#contact' },
+    { label: 'Canada',                 href: '#contact' },
     { label: 'United Kingdom',         href: '#contact' },
     { label: 'European Union',         href: '#contact' },
     { label: 'Australia & NZ',         href: '#contact' },

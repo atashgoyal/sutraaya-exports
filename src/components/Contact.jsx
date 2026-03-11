@@ -69,7 +69,7 @@ export default function Contact({ prefillProduct = '' }) {
               </p>
               <p>
                 We handle export logistics end-to-end: quality inspection, custom packaging,
-                insured shipping, and paperwork for US, UK & EU customs.
+                insured shipping, and paperwork for US, UK, Canada & EU customs.
               </p>
             </div>
 
@@ -147,22 +147,6 @@ export default function Contact({ prefillProduct = '' }) {
               ))}
             </div>
 
-            {/* Manufacturer note */}
-            <div className="reveal reveal-delay-4 mt-10 p-5 border border-gold/30 bg-cream">
-              <p className="font-inter text-xs text-bark/50 mb-2 tracking-wider uppercase"
-                 style={{ fontSize: '10px', letterSpacing: '0.18em' }}>Manufacturing Partner</p>
-              <a
-                href="https://deals.heartfulcraft.com/shruti-srivastava/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-cormorant text-lg text-indigo-deep hover:text-gold transition-colors duration-200"
-              >
-                Heartful Crafts — Shruti Srivastava
-              </a>
-              <p className="font-inter text-xs text-bark/50 mt-1 leading-relaxed">
-                Master artisan studio based in Jaipur, Rajasthan
-              </p>
-            </div>
           </div>
 
           {/* ── Right: Contact form ────────────────── */}

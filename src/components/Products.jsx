@@ -51,12 +51,12 @@ export default function Products({ onInquire }) {
         <div className="text-center mb-16">
           <p className="reveal section-eyebrow mb-3">Our Collection</p>
           <h2 className="reveal section-title reveal-delay-1 mb-5">
-            Artisan Blue Pottery
+            Artisan Crafts from India
           </h2>
           <div className="reveal reveal-delay-2 gold-divider mx-auto mb-6" />
           <p className="reveal reveal-delay-3 font-inter text-sm text-bark/60 max-w-xl mx-auto leading-relaxed">
-            Each piece is hand-thrown, hand-painted, and kiln-fired by master artisans in Jaipur,
-            Rajasthan — carrying centuries of craft heritage into your home.
+            From hand-painted Blue Pottery and block-print textiles to carved woodwork and
+            artisan bags — each piece carries the heritage of India's finest craft traditions.
           </p>
         </div>
 
