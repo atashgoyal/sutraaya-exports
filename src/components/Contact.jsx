@@ -1,3 +1,4 @@
+import { FaWhatsapp } from 'react-icons/fa'
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
 
 const CONTACT_ITEMS = [
@@ -15,12 +16,7 @@ const CONTACT_ITEMS = [
   },
   {
     icon: (
-      <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-        <path d="M9 2a7 7 0 016 10.5L16 16l-3.5-1A7 7 0 119 2z"
-              stroke="#B8962E" strokeWidth="1.2" fill="none"/>
-        <path d="M6.5 7.5c.5 1 1.5 2 2.5 2.5"
-              stroke="#B8962E" strokeWidth="1.2" strokeLinecap="round"/>
-      </svg>
+      <FaWhatsapp size={18} color="#B8962E" />
     ),
     label: 'WhatsApp',
     value: '+91 98118 18950',
@@ -101,13 +97,9 @@ export default function Contact() {
             href="https://wa.me/919811818950"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-primary"
+            className="btn-primary flex items-center gap-2"
           >
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-              <path d="M8 1.5a6.5 6.5 0 015.5 9.9L14.5 14.5l-3.1-.9A6.5 6.5 0 118 1.5z"
-                    stroke="currentColor" strokeWidth="1.4" fill="none"/>
-              <path d="M5.5 6.5c.4.8 1.2 1.6 2 2" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round"/>
-            </svg>
+            <FaWhatsapp size={16} />
             Chat on WhatsApp
           </a>
           <a
