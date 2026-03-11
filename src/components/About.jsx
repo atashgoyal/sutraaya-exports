@@ -1,4 +1,3 @@
-import React from 'react'
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
 
 const PILLARS = [
@@ -90,7 +89,7 @@ export default function About() {
               <p className="italic text-bark/60">Crafted in India, delivered worldwide.</p>
             </div>
 
-            <div className="reveal reveal-delay-3 mt-8 flex flex-col sm:flex-row gap-4">
+            <div className="reveal reveal-delay-3 mt-8">
               <button
                 className="btn-primary"
                 onClick={() => {
@@ -99,15 +98,6 @@ export default function About() {
                 }}
               >
                 View Collection
-              </button>
-              <button
-                className="btn-outline"
-                onClick={() => {
-                  const el = document.getElementById('contact')
-                  if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 72, behavior: 'smooth' })
-                }}
-              >
-                Partner With Us
               </button>
             </div>
           </div>
