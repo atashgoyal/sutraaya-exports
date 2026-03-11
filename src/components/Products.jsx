@@ -3,10 +3,13 @@ import ProductCard from './ProductCard'
 import { products, CATEGORIES } from '../data/products'
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
 
+const MOBILE_LIMIT = 8
+
 export default function Products({ onInquire }) {
   const [activeCategory, setActiveCategory] = useState('All')
   const [displayed,      setDisplayed]      = useState(products)
   const [animKey,        setAnimKey]         = useState(0)
+  const [showAll,        setShowAll]         = useState(false)
   const sectionRef = useScrollAnimation()
   const gridRef    = useRef(null)
 
@@ -17,6 +20,7 @@ export default function Products({ onInquire }) {
         ? products
         : products.filter((p) => p.category === activeCategory)
     setDisplayed(filtered)
+    setShowAll(false)
     setAnimKey((k) => k + 1)
   }, [activeCategory])
 
@@ -83,17 +87,33 @@ export default function Products({ onInquire }) {
         <div
           ref={gridRef}
           key={animKey}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+          className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-6"
         >
           {displayed.map((product, index) => (
-            <ProductCard
+            <div
               key={product.id}
-              product={product}
-              index={index}
-              onInquire={onInquire}
-            />
+              className={!showAll && index >= MOBILE_LIMIT ? 'hidden sm:block' : ''}
+            >
+              <ProductCard
+                product={product}
+                index={index}
+                onInquire={onInquire}
+              />
+            </div>
           ))}
         </div>
+
+        {/* ── Show More / Less (mobile only) ──────── */}
+        {displayed.length > MOBILE_LIMIT && (
+          <div className="sm:hidden mt-8 text-center">
+            <button
+              className="btn-outline"
+              onClick={() => setShowAll((v) => !v)}
+            >
+              {showAll ? 'Show Less' : `Show All ${displayed.length} Pieces`}
+            </button>
+          </div>
+        )}
 
         {/* ── Empty state ─────────────────────────── */}
         {displayed.length === 0 && (
