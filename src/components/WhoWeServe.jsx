@@ -119,7 +119,7 @@ export default function WhoWeServe() {
         </div>
 
         {/* ── How It Works ─────────────────────────── */}
-        <div className="text-center mb-16">
+        <div id="how-it-works" className="text-center mb-16">
           <p className="reveal section-eyebrow mb-3">The Process</p>
           <h2 className="reveal section-title reveal-delay-1 mb-5">
             How It Works

@@ -105,7 +105,7 @@ export default function ProductCard({ product, index, onInquire }) {
             onClick={(e) => e.stopPropagation()}
             className="font-inter text-xs text-bark/50 hover:text-gold transition-colors duration-200 tracking-wide"
           >
-            Heartful Crafts ↗
+            Catalog ↗
           </a>
           <button
             onClick={(e) => { e.stopPropagation(); onInquire(product) }}

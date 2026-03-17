@@ -5,7 +5,7 @@ const NAV_LINKS = [
   { label: 'Collection',   href: '#collection' },
   { label: 'Our Story',    href: '#about' },
   { label: 'Who We Serve', href: '#who-we-serve' },
-  { label: 'Categories',   href: '#categories' },
+  { label: 'How It Works', href: '#how-it-works' },
   { label: 'Contact',      href: '#contact' },
 ]
 
