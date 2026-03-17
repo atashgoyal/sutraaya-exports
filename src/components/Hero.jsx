@@ -83,16 +83,14 @@ export default function Hero() {
       {/* ── Hero content ─────────────────────────── */}
       <div className="relative z-10 max-w-3xl mx-auto">
 
-        {/* Eyebrow badge */}
-        <div ref={badgeRef} className="inline-flex items-center gap-3 mb-8">
-          <span className="block w-8 h-px bg-gold opacity-60" />
-          <span
-            className="font-inter text-xs font-medium tracking-widest uppercase text-gold-light"
-            style={{ letterSpacing: '0.3em' }}
-          >
-            Est. India · Global Artisan Exports
-          </span>
-          <span className="block w-8 h-px bg-gold opacity-60" />
+        {/* Eyebrow star decoration */}
+        <div ref={badgeRef} className="flex items-center justify-center gap-4 mb-10">
+          <span className="block w-16 h-px bg-gold opacity-40" />
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M10 2 L12 8 L18 8 L13 12 L15 18 L10 14 L5 18 L7 12 L2 8 L8 8 Z"
+                  fill="#B8962E" fillOpacity="0.6" />
+          </svg>
+          <span className="block w-16 h-px bg-gold opacity-40" />
         </div>
 
         {/* Main heading */}

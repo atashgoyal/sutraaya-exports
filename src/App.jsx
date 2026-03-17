@@ -1,11 +1,12 @@
 import { useState, useEffect, useCallback } from 'react'
 import { FaWhatsapp } from 'react-icons/fa'
-import Header  from './components/Header'
-import Hero    from './components/Hero'
-import Products from './components/Products'
-import About   from './components/About'
-import Contact from './components/Contact'
-import Footer  from './components/Footer'
+import Header      from './components/Header'
+import Hero        from './components/Hero'
+import Products    from './components/Products'
+import WhoWeServe  from './components/WhoWeServe'
+import About       from './components/About'
+import Contact     from './components/Contact'
+import Footer      from './components/Footer'
 
 /* ─────────────────────────────────────────────────
    Inquiry Modal — triggered when a product card's
@@ -66,9 +67,30 @@ function InquiryModal({ product, onClose }) {
               <h3 className="font-cormorant text-2xl font-medium text-indigo-deep leading-tight mb-3">
                 {product.name}
               </h3>
-              <p className="font-inter text-xs text-bark/60 leading-relaxed">
+              <p className="font-inter text-xs text-bark/60 leading-relaxed mb-4">
                 {product.description}
               </p>
+              {/* Product details */}
+              <div className="space-y-1.5 border-t border-cream pt-3">
+                {product.size && (
+                  <div className="flex items-center gap-2">
+                    <span className="font-inter text-bark/40 uppercase" style={{ fontSize: '9px', letterSpacing: '0.14em', minWidth: '52px' }}>Size</span>
+                    <span className="font-inter text-bark/70 text-xs">{product.size}</span>
+                  </div>
+                )}
+                {product.hsnCode && (
+                  <div className="flex items-center gap-2">
+                    <span className="font-inter text-bark/40 uppercase" style={{ fontSize: '9px', letterSpacing: '0.14em', minWidth: '52px' }}>HSN</span>
+                    <span className="font-inter text-bark/70 text-xs">{product.hsnCode}</span>
+                  </div>
+                )}
+                <div className="flex items-center gap-2">
+                  <span className="font-inter text-bark/40 uppercase" style={{ fontSize: '9px', letterSpacing: '0.14em', minWidth: '52px' }}>Price</span>
+                  <span className="font-inter text-xs font-medium text-gold">
+                    {product.price === 'POA' ? 'Price on Application' : product.price}
+                  </span>
+                </div>
+              </div>
             </div>
             <div className="space-y-3 mt-6">
               <a
@@ -208,6 +230,7 @@ export default function App() {
       <main>
         <Hero />
         <Products onInquire={handleInquire} />
+        <WhoWeServe />
         <About />
         <Contact />
       </main>

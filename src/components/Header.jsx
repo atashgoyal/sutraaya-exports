@@ -2,10 +2,11 @@ import React, { useState, useEffect } from 'react'
 import Logo from './Logo'
 
 const NAV_LINKS = [
-  { label: 'Collection', href: '#collection' },
-  { label: 'Our Story',  href: '#about' },
-  { label: 'Categories', href: '#categories' },
-  { label: 'Contact',    href: '#contact' },
+  { label: 'Collection',   href: '#collection' },
+  { label: 'Our Story',    href: '#about' },
+  { label: 'Who We Serve', href: '#who-we-serve' },
+  { label: 'Categories',   href: '#categories' },
+  { label: 'Contact',      href: '#contact' },
 ]
 
 export default function Header() {
@@ -129,21 +130,21 @@ export default function Header() {
 
       {/* Mobile Menu Overlay */}
       <div
-        className={`fixed inset-0 z-40 bg-ivory/98 backdrop-blur-md flex flex-col items-center justify-center transition-all duration-500 ${
+        className={`fixed inset-0 z-40 flex flex-col items-center justify-center transition-all duration-500 ${
           menuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}
+        style={{ background: 'linear-gradient(160deg, #1A237E 0%, #283593 45%, #1E3A7E 70%, #1A1042 100%)' }}
       >
         {/* Decorative background accent */}
-        <div className="absolute inset-0 pattern-overlay opacity-30 pointer-events-none" />
+        <div className="absolute inset-0 pattern-overlay opacity-20 pointer-events-none" />
 
         <nav className="flex flex-col items-center gap-8 relative z-10">
-          <Logo variant="dark" />
-          <div className="gold-divider-wide my-2" />
-          {NAV_LINKS.map(({ label, href }, i) => (
+          <div className="gold-divider-wide" />
+          {NAV_LINKS.map(({ label, href }) => (
             <button
               key={href}
               onClick={() => handleNavClick(href)}
-              className="font-cormorant text-4xl font-light text-indigo-deep hover:text-gold transition-colors duration-200"
+              className="font-cormorant text-4xl font-light text-ivory hover:text-gold transition-colors duration-200"
             >
               {label}
             </button>
@@ -157,7 +158,7 @@ export default function Header() {
         </nav>
 
         {/* Footer note */}
-        <p className="absolute bottom-8 font-inter text-xs text-bark/40 tracking-widest uppercase">
+        <p className="absolute bottom-8 font-inter text-xs text-ivory/40 tracking-widest uppercase">
           sutraayaexports.com
         </p>
       </div>

@@ -51,6 +51,7 @@ const FOOTER_LINKS = {
     { label: 'Our Story',              href: '#about' },
     { label: 'Contact Us',             href: '#contact' },
     { label: 'Request a Quote',        href: '#contact' },
+    { label: 'Supplier Catalogue ↗',   href: 'https://deals.heartfulcraft.com/shruti-srivastava/' },
   ],
   Export: [
     { label: 'United States',          href: '#contact' },
@@ -147,7 +148,7 @@ export default function Footer() {
                       target={href.startsWith('http') ? '_blank' : undefined}
                       rel="noopener noreferrer"
                       onClick={(e) => handleNav(e, href)}
-                      className="font-inter text-xs text-ivory/50 hover:text-gold transition-colors duration-200"
+                      className="font-inter text-xs text-ivory/70 hover:text-gold transition-colors duration-200"
                     >
                       {label}
                     </a>

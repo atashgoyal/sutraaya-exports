@@ -50,6 +50,11 @@ export default function ProductCard({ product, index, onInquire }) {
           <p className="font-inter text-xs text-ivory/70 text-center leading-relaxed">
             {product.description}
           </p>
+          {product.size && (
+            <p className="font-inter text-xs text-gold/80 text-center" style={{ fontSize: '10px', letterSpacing: '0.06em' }}>
+              {product.size}
+            </p>
+          )}
           <button
             className="mt-2 px-5 py-2 border border-gold text-gold font-inter text-xs tracking-wider uppercase hover:bg-gold hover:text-ivory transition-all duration-200"
             style={{ letterSpacing: '0.14em' }}
@@ -87,10 +92,21 @@ export default function ProductCard({ product, index, onInquire }) {
         >
           {product.name}
         </h3>
+        {product.price && product.price !== 'POA' && (
+          <p className="font-inter text-xs text-gold mt-1" style={{ letterSpacing: '0.04em' }}>
+            {product.price}
+          </p>
+        )}
         <div className="flex items-center justify-between mt-3">
-          <span className="font-inter text-xs text-bark/50 tracking-wide">
-            Heartful Crafts
-          </span>
+          <a
+            href="https://deals.heartfulcraft.com/shruti-srivastava/"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={(e) => e.stopPropagation()}
+            className="font-inter text-xs text-bark/50 hover:text-gold transition-colors duration-200 tracking-wide"
+          >
+            Heartful Crafts ↗
+          </a>
           <button
             onClick={(e) => { e.stopPropagation(); onInquire(product) }}
             className="flex items-center gap-1 font-inter text-xs text-gold hover:text-gold-dark transition-colors duration-200"
