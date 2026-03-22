@@ -98,15 +98,6 @@ export default function ProductCard({ product, index, onInquire }) {
           </p>
         )}
         <div className="flex items-center justify-between mt-3">
-          <a
-            href="https://deals.heartfulcraft.com/shruti-srivastava/"
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={(e) => e.stopPropagation()}
-            className="font-inter text-xs text-bark/50 hover:text-gold transition-colors duration-200 tracking-wide"
-          >
-            Catalog ↗
-          </a>
           <button
             onClick={(e) => { e.stopPropagation(); onInquire(product) }}
             className="flex items-center gap-1 font-inter text-xs text-gold hover:text-gold-dark transition-colors duration-200"

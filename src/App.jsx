@@ -230,8 +230,8 @@ export default function App() {
       <main>
         <Hero />
         <Products onInquire={handleInquire} />
+        <About />ß
         <WhoWeServe />
-        <About />
         <Contact />
       </main>
       <Footer />

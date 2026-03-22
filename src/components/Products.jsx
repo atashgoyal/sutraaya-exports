@@ -24,6 +24,13 @@ export default function Products({ onInquire }) {
     setAnimKey((k) => k + 1)
   }, [activeCategory])
 
+  /* ── Listen for footer category nav ──────── */
+  useEffect(() => {
+    const handler = (e) => setActiveCategory(e.detail)
+    window.addEventListener('sutraaya:filterCategory', handler)
+    return () => window.removeEventListener('sutraaya:filterCategory', handler)
+  }, [])
+
   /* ── Re-observe newly rendered cards ──────── */
   useEffect(() => {
     if (!gridRef.current) return

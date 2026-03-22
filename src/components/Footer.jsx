@@ -38,20 +38,20 @@ const SOCIAL_LINKS = [
   },
 ]
 
+const COLLECTION_CATEGORIES = [
+  'Blue Pottery',
+  'Wooden Handicrafts',
+  'Epoxy Resin Wooden Handicrafts',
+  'Handmade Cotton',
+  'HandBlock Fabrics',
+]
+
 const FOOTER_LINKS = {
-  Collection: [
-    { label: 'Blue Pottery',           href: '#collection' },
-    { label: 'Marble Crafts',          href: '#collection' },
-    { label: 'Hand Block Fabrics',     href: '#collection' },
-    { label: 'Wooden Crafts',          href: '#collection' },
-    { label: 'Bags & Accessories',     href: '#collection' },
-    { label: 'Showpieces',             href: '#collection' },
-  ],
   Company: [
     { label: 'Our Story',              href: '#about' },
     { label: 'Contact Us',             href: '#contact' },
     { label: 'Request a Quote',        href: '#contact' },
-    { label: 'Supplier Catalogue ↗',   href: 'https://deals.heartfulcraft.com/shruti-srivastava/' },
+    { label: 'Buying Guide ↓',         href: '/Buying Guide.pdf', download: true },
   ],
   Export: [
     { label: 'United States',          href: '#contact' },
@@ -74,6 +74,16 @@ export default function Footer() {
         const top = target.getBoundingClientRect().top + window.scrollY - 72
         window.scrollTo({ top, behavior: 'smooth' })
       }
+    }
+  }
+
+  const handleCategory = (e, category) => {
+    e.preventDefault()
+    window.dispatchEvent(new CustomEvent('sutraaya:filterCategory', { detail: category }))
+    const target = document.querySelector('#collection')
+    if (target) {
+      const top = target.getBoundingClientRect().top + window.scrollY - 72
+      window.scrollTo({ top, behavior: 'smooth' })
     }
   }
 
@@ -105,7 +115,7 @@ export default function Footer() {
 
       {/* ── Main Footer ─────────────────────────── */}
       <div className="max-w-7xl mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12">
 
           {/* Brand column */}
           <div className="lg:col-span-2">
@@ -131,6 +141,29 @@ export default function Footer() {
             </div>
           </div>
 
+          {/* Collection categories column */}
+          <div>
+            <h4
+              className="font-inter font-medium text-ivory/90 mb-5"
+              style={{ fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase' }}
+            >
+              Collection
+            </h4>
+            <ul className="space-y-3">
+              {COLLECTION_CATEGORIES.map((cat) => (
+                <li key={cat}>
+                  <a
+                    href="#collection"
+                    onClick={(e) => handleCategory(e, cat)}
+                    className="font-inter text-xs text-ivory/70 hover:text-gold transition-colors duration-200"
+                  >
+                    {cat}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
           {/* Link columns */}
           {Object.entries(FOOTER_LINKS).map(([heading, links]) => (
             <div key={heading}>
@@ -141,13 +174,14 @@ export default function Footer() {
                 {heading}
               </h4>
               <ul className="space-y-3">
-                {links.map(({ label, href }) => (
+                {links.map(({ label, href, download }) => (
                   <li key={label}>
                     <a
                       href={href}
                       target={href.startsWith('http') ? '_blank' : undefined}
                       rel="noopener noreferrer"
-                      onClick={(e) => handleNav(e, href)}
+                      download={download || undefined}
+                      onClick={(e) => !download && handleNav(e, href)}
                       className="font-inter text-xs text-ivory/70 hover:text-gold transition-colors duration-200"
                     >
                       {label}
