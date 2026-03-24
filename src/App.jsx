@@ -84,12 +84,6 @@ function InquiryModal({ product, onClose }) {
                     <span className="font-inter text-bark/70 text-xs">{product.hsnCode}</span>
                   </div>
                 )}
-                <div className="flex items-center gap-2">
-                  <span className="font-inter text-bark/40 uppercase" style={{ fontSize: '9px', letterSpacing: '0.14em', minWidth: '52px' }}>Price</span>
-                  <span className="font-inter text-xs font-medium text-gold">
-                    {product.price === 'POA' ? 'Price on Application' : product.price}
-                  </span>
-                </div>
               </div>
             </div>
             <div className="space-y-3 mt-6">
