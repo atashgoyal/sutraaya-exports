@@ -121,9 +121,7 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <Logo variant="light" />
             <p className="mt-6 font-inter text-xs text-ivory/50 leading-relaxed max-w-xs">
-              Sutraaya Exports is your trusted bridge to India's finest handcrafted heritage.
-              We curate, authenticate, and export premium artisan goods to discerning buyers
-              across the globe.
+              Sutraaya Exports acts as a trusted sourcing and buying partner for international buyers & global trade networks seeking authentic Indian handcrafted products. We represent global clients on-ground in India, ensuring seamless communication, verified sourcing, and consistent quality offering buyers complete transparency and confidence in every order.
             </p>
 
 
